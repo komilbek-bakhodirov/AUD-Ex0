@@ -3,7 +3,7 @@ plugins {
 }
 
 exercise {
-    assignmentId.set("h00")
+    assignmentId.set("p0")
 }
 
 submission {
