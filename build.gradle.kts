@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.algomate)
+    alias(libs.plugins.jagr.gradle)
 }
 
 exercise {
@@ -18,4 +19,15 @@ submission {
     requireTests = false
     // Optionally require public grader for mainBuildSubmission task. Default is false
     requireGraderPublic = false
+}
+
+
+
+jagr {
+    graders {
+        val graderPublic by getting {
+            graderName.set("P0-Public")
+            rubricProviderName.set("p0.P0_RubricProvider_Public")
+        }
+    }
 }

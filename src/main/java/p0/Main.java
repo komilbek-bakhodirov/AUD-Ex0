@@ -11,6 +11,10 @@ public class Main {
      * @param args program arguments, currently ignored
      */
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        FibonacciCalculator iterativeFibonacciCalculator = new IterativeFibonacciCalculator();
+        FibonacciCalculator recursiveFibonacciCalculator = new RecursiveFibonacciCalculator();
+
+        System.out.println(iterativeFibonacciCalculator.get(10));
+        System.out.println(recursiveFibonacciCalculator.get(10));
     }
 }
