@@ -13,6 +13,22 @@ public class IterativeFibonacciCalculator implements FibonacciCalculator {
 
     @Override
     public int get(int n) {
-        return crash(); //TODO H5 - remove if implemented
+        if (n<0)
+            throw new IllegalArgumentException("Index must be non-negative");
+
+        int a = 0;
+        int b = 1;
+
+        if (n==0)
+            return a;
+        if (n==1)
+            return b;
+
+        for (int i = 2; i <=n ; i++) {
+            int next = a+b;
+            a=b;
+            b=next;
+        }
+        return b;
     }
 }

@@ -14,7 +14,12 @@ public class Main {
         FibonacciCalculator iterativeFibonacciCalculator = new IterativeFibonacciCalculator();
         FibonacciCalculator recursiveFibonacciCalculator = new RecursiveFibonacciCalculator();
 
-        System.out.println(iterativeFibonacciCalculator.get(10));
-        System.out.println(recursiveFibonacciCalculator.get(10));
+        try {
+            System.out.println(iterativeFibonacciCalculator.get(10));
+            System.out.println(recursiveFibonacciCalculator.get(10));
+        } catch (IllegalArgumentException e){
+            System.out.println("Error: " + e.getMessage());
+        }
+
     }
 }

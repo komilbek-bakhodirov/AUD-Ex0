@@ -13,6 +13,14 @@ public class RecursiveFibonacciCalculator implements FibonacciCalculator {
 
     @Override
     public int get(int n) {
-        return crash(); //TODO H5 - remove if implemented
+        if (n<0)
+            throw new IllegalArgumentException("Index must be non-negative");
+
+        if (n==0)
+            return 0;
+        if (n==1)
+            return 1;
+
+        return get(n-1) + get(n-2);
     }
 }
